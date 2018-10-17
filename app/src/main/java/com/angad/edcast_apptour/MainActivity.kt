@@ -20,10 +20,6 @@ class MainActivity : AppCompatActivity(), IOnTourCompleted {
         setContentView(R.layout.activity_main)
 
         AppTour.initializeSdk(this)
-
-        AppTour.stepNumber(1).onView(button).title("Button").desciption("tap on button for surprise").show()
-        AppTour.stepNumber(2).onView(imageView).title("Image").desciption("tap on image for surprise").show()
-        AppTour.stepNumber(3).onView(editText).title("Field").desciption("tap on edit for surprise").show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
