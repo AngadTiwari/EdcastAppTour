@@ -7,7 +7,5 @@ class AppController: Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        AppTour.initializeSdk(context = this)
     }
 }
