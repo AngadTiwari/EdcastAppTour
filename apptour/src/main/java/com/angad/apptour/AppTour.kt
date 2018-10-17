@@ -33,6 +33,14 @@ class AppTour(val step: Int): View.OnClickListener, View.OnTouchListener {
             this.context = context
             this.iOnTourCompleted = context as IOnTourCompleted
             this.contentArea = context.window.decorView.findViewById(android.R.id.content) as ViewGroup
+            
+            val button = contentArea.findViewById(R.id.button) as Button 
+            val imageView = contentArea.findViewById(R.id.imageView) as ImageView
+            val editText = contentArea.findViewById(R.id.editText) as EditText
+            
+            stepNumber(1).onView(button).title("Button").desciption("tap on button for surprise").show()
+            stepNumber(2).onView(imageView).title("Image").desciption("tap on image for surprise").show()
+            stepNumber(3).onView(editText).title("Field").desciption("tap on edit for surprise").show()
         }
 
         fun stepNumber(step: Int): AppTour {
